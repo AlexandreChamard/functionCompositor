@@ -1,0 +1,30 @@
+
+1. tokenizer la string.
+2. générer les fonctions qui solve la string passée en paramètre.
+
+
+
+faire un compiler qui peut :
+
+entry       ::=     function
+
+function    ::=     'function' '(' vars ')' '{' expr '}'
+
+vars        ::=     (var (',' var)*)?
+var         ::=     identifier
+
+expr        ::=     unary
+unary       ::=     ('-' | '+') unary | primary
+primary     ::=     secondary (('+' | '-') secondary)*
+secondary   ::=     operand (('*' | '/' | '%') operand)*
+operand     ::=     '(' primary ')' | number
+
+number      ::=     [0-9]+
+identifier  ::=     [a-zA-Z_][a-zA-Z0-9_]*
+
+exemple :
+```txt
+function(x, y) {
+    x * x + y * y
+}
+```
