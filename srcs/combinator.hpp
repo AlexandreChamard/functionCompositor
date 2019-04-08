@@ -7,7 +7,6 @@ class Combinator {
 
 
 protected:
-    // à mettre dans une class Compiler
     template<class Lambda, class Lambda2>
     auto createAdd(int &i, Lambda &&a, Lambda2 &&b) {
         return [&, a, b] () mutable {
@@ -15,7 +14,6 @@ protected:
         };
     }
 
-    // à mettre dans une class Compiler
     template<class Lambda, class Lambda2>
     auto createFunc(Lambda &&a, Lambda2 &&b) {
         function_ptr<CombinedFunction<int>> e = std::make_shared<CombinedFunction<int>>();

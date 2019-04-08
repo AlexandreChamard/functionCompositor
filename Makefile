@@ -7,7 +7,7 @@ CPPFLAGS	=	-W -Wextra -std=c++1z -g
 
 NAME		=	a.out
 
-SRCS		=	srcs/creator2.cpp	\
+SRCS		=	srcs/main.cpp	\
 
 
 OBJS		=	$(SRCS:.cpp=.o)
